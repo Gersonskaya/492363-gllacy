@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин «Глэйси»</title>
+    <link href="./css/style.css" rel="stylesheet">
   </head>
   <body>
       <header class="main-header">
           <nav class="main-nav">
               <a class="main-header-logo">
-                  <img src="http://placehold.it/150x100" width="150" height="50" alt="Логотип магазина «Глэйси»">
+                  <img src="img/logo.svg" width="150" height="50" alt="Логотип магазина «Глэйси»">
               </a>
               <ul class="site-navigation">
                   <li><a href="./catalog.html">Каталог</a></li>
@@ -39,7 +40,7 @@
               <img class="promo-1" src="http://placehold.it/150x100" alt="Изображение двух рожков мороженного">
               <a class="button" href="./catalog.html">Давайте оба!</a>
           </section>
-
+          <!-- Тег img - временное обозначение места изображения. Будет установленно фоном с подсветкой в стилях. -->
           <div class="sale">
               <article class="sale-raspbery">
                   <h2>Малинка даром!</h2>
@@ -57,26 +58,26 @@
               <h3>Популярные вкусы</h3>
               <ul>
                   <li class="citrus">
-                      <img class="citrus-image" src="http://placehold.it/150x100" width="200" height="200" alt="Сливочное мороженное с апельсиновым джемом">
-                      <img class="hit-image" src="http://placehold.it/150x100" width="50" height="50" alt="Хит">
+                      <img class="citrus-image" src="img/citrus.jpg" width="200" height="200" alt="Сливочное мороженное с апельсиновым джемом">
+                      <img class="hit-image" src="img/hit.svg" width="50" height="50" alt="Хит">
                       <a href="./catalog.html#citrus">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
                       <p class="citrus-price">310₽<span class="weight">/кг</span></p>
                   </li>
                   <li class="coffee">
-                      <img class="coffee-image" src="http://placehold.it/150x100" width="200" height="200" alt="Сливочное-кофейное">
-                      <img class="hit-image" src="http://placehold.it/150x100" width="50" height="50" alt="Хит">
+                      <img class="coffee-image" src="img/coffee.jpg" width="200" height="200" alt="Сливочное-кофейное">
+                      <img class="hit-image" src="img/hit.svg" width="50" height="50" alt="Хит">
                       <a href="./catalog.html#coffee">Сливочное-кофейное с кусочками шоколада</a>
                       <p class="coffee-price">380₽<span class="weight">/кг</span></p>
                   </li>
                   <li class="strawberry">
-                      <img class="strawberry-image" src="http://placehold.it/150x100" width="200" height="200" alt="Сливочное-клубничное">
-                      <img class="hit-image" src="http://placehold.it/150x100" width="50" height="50" alt="Хит">
+                      <img class="strawberry-image" src="img/strawberry.jpg" width="200" height="200" alt="Сливочное-клубничное">
+                      <img class="hit-image" src="img/hit.svg" width="50" height="50" alt="Хит">
                       <a href="./catalog.html#strawberry">Сливочное-клубничное с присыпкой из белого шоколада</a>
                       <p class="strawberry-price">355₽<span class="weight">/кг</span></p>
                   </li>
                   <li class="caramel">
-                      <img class="caramel-image" src="http://placehold.it/150x100" width="200" height="200" alt="Сливочное крем-брюле">
-                      <img class="hit-image" src="http://placehold.it/150x100" width="50" height="50" alt="Хит">
+                      <img class="caramel-image" src="img/caramel.jpg" width="200" height="200" alt="Сливочное крем-брюле">
+                      <img class="hit-image" src="img/hit.svg" width="50" height="50" alt="Хит">
                       <a href="./catalog.html#caramel">Сливочное крем-брюле с карамельной подливкой</a>
                       <p class="caramel-price">415₽<span class="weight">/кг</span></p>
                   </li>
@@ -108,13 +109,18 @@
           <section class="navigation">
               <h3>Навигация</h3>
               <div class="navigation-map">
-                  <img src="http://placehold.it/150x100" alt="Карта с расположением офлайн-магазина">
-                  <span class="marker">x</span>
+                  <img src="img/map.jpg" alt="Карта с расположением офлайн-магазина">
+                  <span class="marker"><img src="img/pin.svg" alt="Маркер"></span>
               </div>
 
               <div class="contacts">
-                  <p>Адрес главного офиса и офлайн-магазина: <span class="address">ул. Большая Конюшенная 19/8, Санкт-Петербург</span></p>
-                  <p>Для заказов по телефону: <span class="phone">8 812 450-25-25</span>(с 10 до 20 ежедневно)</p>
+                  <p>Адрес главного офиса <br>
+                      и офлайн-магазина: <br>
+                      <span class="address">ул. Большая Конюшенная <br>
+                          19/8, Санкт-Петербург</span></p>
+                  <p>Для заказов по телефону: <br>
+                      <span class="phone">8 812 450-25-25</span><br>
+                      (с 10 до 20 ежедневно)</p>
                   <button type="submit">Форма обратной связи</button>
               </div>
           </section>
@@ -123,10 +129,10 @@
       <footer class="main-footer">
           <div class="footer-social">
               <ul>
-                  <li><a class="social-button" href="#">Твитер</a></li>
-                  <li><a class="social-button" href="#">Инстаграм</a></li>
-                  <li><a class="social-button" href="#">Фейсбук</a></li>
-                  <li><a class="social-button" href="#">Вконтакте</a></li>
+                  <li><a class="social-button" href="#"><img src="img/twitter.svg" alt="Твитер"></a></li>
+                  <li><a class="social-button" href="#"><img src="img/instagram.svg" alt="Инстаграм"></a></li>
+                  <li><a class="social-button" href="#"><img src="img/fb.svg" alt="Фейсбук"></a></li>
+                  <li><a class="social-button" href="#"><img src="img/vk.svg" alt="Вконтакте"></a></li>
               </ul>
           </div>
 
@@ -138,7 +144,7 @@
           </div>
 
           <div class="footer-copyright">
-              <img class="logo-html" src="https://htmlacademy.ru/static/img/htmlacademy.svg" width="116" height="41" alt="Логотип HTML Academy">
+              <img src="img/logo-htmlacademy.svg" width="116" height="41" alt="Логотип HTML Academy">
               <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2017</p>
           </div>
 
