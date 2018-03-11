@@ -12,9 +12,17 @@
                   <img src="img/logo.svg" width="150" height="50" alt="Логотип магазина &laquo;Глэйси&raquo;">
               </a>
               <ul class="site-navigation">
-                  <li><a href="./catalog.html">Каталог</a></li>
-                  <li><a href="#">Доставка и оплата</a></li>
-                  <li><a href="#">О Компании</a></li>
+                  <li class="url-catalog"><a class="url" href="./catalog.html">Каталог</a>
+                      <ul class="sab-menu-catalog">
+                          <li class="new"><a href="#">Новинки</a></li>
+                          <li><a href="./catalog.html">Сливочные</a></li>
+                          <li><a href="#">Щербеты</a></li>
+                          <li><a href="#">Фруктовый лед</a></li>
+                          <li><a href="#">Мелорин</a></li>
+                      </ul>
+                  </li>
+                  <li><a class="url" href="#">Доставка и оплата</a></li>
+                  <li><a class="url" href="#">О Компании</a></li>
               </ul>
               <ul class="user-navigation">
                   <li><a href="#">Поиск</a></li>
@@ -30,7 +38,7 @@
 
       <main class="container">
           <section class="promo">
-              <h3>Промо</h3>
+              <h3 class="visually-hidden">Промо</h3>
               <div class="index-paginator">
                   <a class="active" href="index.html#1">1</a>
                   <a href="index.html#2">2</a>
@@ -38,47 +46,47 @@
               </div>
               <h1 class="caption">Крем-брюле и пломбир с малиновым джемом</h1>
               <img class="promo-1" src="http://placehold.it/150x100" alt="Изображение двух рожков мороженного">
-              <a class="button" href="./catalog.html">Давайте оба!</a>
+              <a class="button button-promo" href="./catalog.html">Давайте оба!</a>
           </section>
           <!-- Тег img - временное обозначение места изображения. Будет установленно фоном с подсветкой в стилях. -->
           <div class="sale">
-              <article class="sale-raspbery">
+              <article class="sale-raspberry">
                   <h2>Малинка даром!</h2>
                   <p>При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-                  <a class="button" href="#">Хочу варенье!</a>
+                  <a class="button button-raspberry" href="#">Хочу варенье!</a>
               </article>
-              <article class="sale-chokolate">
+              <article class="sale-chocolate">
                   <h2>Шоколадки даром!</h2>
                   <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпи совершенно бесплатно.</p>
-                  <a class="button" href="#">Хочу шоколадки!</a>
+                  <a class="button button-chocolate" href="#">Хочу шоколадки!</a>
               </article>
           </div>
 
           <section class="hit">
-              <h3>Популярные вкусы</h3>
+              <h3 class="visually-hidden">Популярные вкусы</h3>
               <ul>
                   <li class="citrus">
                       <img class="citrus-image" src="img/citrus.jpg" width="200" height="200" alt="Сливочное мороженное с апельсиновым джемом">
                       <img class="hit-image" src="img/hit.svg" width="50" height="50" alt="Хит">
-                      <a href="./catalog.html#citrus">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                      <a class="url" href="./catalog.html#citrus">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
                       <p class="citrus-price">310₽<span class="weight">/кг</span></p>
                   </li>
                   <li class="coffee">
                       <img class="coffee-image" src="img/coffee.jpg" width="200" height="200" alt="Сливочное-кофейное">
                       <img class="hit-image" src="img/hit.svg" width="50" height="50" alt="Хит">
-                      <a href="./catalog.html#coffee">Сливочное-кофейное с кусочками шоколада</a>
+                      <a class="url" href="./catalog.html#coffee">Сливочное-кофейное с кусочками шоколада</a>
                       <p class="coffee-price">380₽<span class="weight">/кг</span></p>
                   </li>
                   <li class="strawberry">
                       <img class="strawberry-image" src="img/strawberry.jpg" width="200" height="200" alt="Сливочное-клубничное">
                       <img class="hit-image" src="img/hit.svg" width="50" height="50" alt="Хит">
-                      <a href="./catalog.html#strawberry">Сливочное-клубничное с присыпкой из белого шоколада</a>
+                      <a class="url" href="./catalog.html#strawberry">Сливочное-клубничное с присыпкой из белого шоколада</a>
                       <p class="strawberry-price">355₽<span class="weight">/кг</span></p>
                   </li>
                   <li class="caramel">
                       <img class="caramel-image" src="img/caramel.jpg" width="200" height="200" alt="Сливочное крем-брюле">
                       <img class="hit-image" src="img/hit.svg" width="50" height="50" alt="Хит">
-                      <a href="./catalog.html#caramel">Сливочное крем-брюле с карамельной подливкой</a>
+                      <a class="url" href="./catalog.html#caramel">Сливочное крем-брюле с карамельной подливкой</a>
                       <p class="caramel-price">415₽<span class="weight">/кг</span></p>
                   </li>
               </ul>
@@ -100,14 +108,14 @@
           </article>
 
           <section class="subscribtion">
-              <h3>Рассылка</h3>
+              <h3 class="visually-hidden">Рассылка</h3>
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <!-- Форма отправки эл.почты -->
-              <button type="submit">Отправить</button>
+              <button type="submit" class="button button-subscribtion">Отправить</button>
           </section>
 
           <section class="navigation">
-              <h3>Навигация</h3>
+              <h3 class="visually-hidden">Навигация</h3>
               <div class="navigation-map">
                   <img src="img/map.jpg" alt="Карта с расположением офлайн-магазина">
                   <span class="marker"><img src="img/pin.svg" alt="Маркер"></span>
@@ -121,7 +129,7 @@
                   <p>Для заказов по телефону: <br>
                       <span class="phone">8 812 450-25-25</span><br>
                       (с 10 до 20 ежедневно)</p>
-                  <button type="submit">Форма обратной связи</button>
+                  <button type="submit" class="button button-contacts">Форма обратной связи</button>
               </div>
           </section>
       </main>
@@ -137,26 +145,65 @@
           </div>
 
           <div class="footer-documents">
-              <a href="#">Для поставщиков</a>
-              <a href="#">Наши документы</a>
-              <a href="#">О производстве</a>
-              <a href="#">Экологические стандарты</a>
+              <a class="url" href="#">Для поставщиков</a>
+              <a class="url" href="#">Наши документы</a>
+              <a class="url" href="#">О производстве</a>
+              <a class="url" href="#">Экологические стандарты</a>
           </div>
 
           <div class="footer-copyright">
               <img src="img/logo-htmlacademy.svg" width="116" height="41" alt="Логотип HTML Academy">
-              <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017</p>
+              <p>Сделано в <a class="url" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017</p>
           </div>
 
           <section class="modal modal-search">
               <!-- Форма поиска -->
+              <h3 class="visually-hidden">Форма поиска</h3>
+              <form class="search" action="#" method="get">
+                    <label>
+                        <span class="visually-hidden">Предмет поиска:</span>
+                        <input type="search" name="search" title="Предмет поиска" placeholder="Что ищем?">
+                    </label>
+              </form>
           </section>
 
           <section class="modal modal-login">
               <!-- Форма авторизации -->
+              <h3 class="visually-hidden">Форма авторизации</h3>
+              <form class="login" action="#" method="get">
+                  <label>
+                      <span class="visually-hidden">Электронная почта:</span>
+                      <input type="email" name="email" placeholder="Электронная почта" required>
+                  </label>
+                  <label>
+                      <span class="visually-hidden">Пароль:</span>
+                      <input type="password" name="password" placeholder="Пароль" required>
+                  </label>
+                  <button class="button button-login" type="submit">Войти</button>
+              </form>
               <p><a href="#">Забыли пароль?</a></p>
               <p><a href="#">Новая регистрация</a></p>
-              <a class="button button-modal-login" href="#">Войти</a>
+          </section>
+
+          <section class="modal modal-reply">
+              <!-- Форма обратной связи -->
+              <h3 class="modal-reply-title">Мы обязательно вам ответим!</h3>
+              <form class="reply" action="#" method="post">
+                  <label>
+                      <span class="visually-hidden">Ваше имя:</span>
+                      <input type="text" name="name" placeholder="Как вас зовут?">
+                  </label>
+                  <label>
+                      <span class="visually-hidden">Ваша почта:</span>
+                      <input type="email" name="email" placeholder="Ваша почта для ответа?" required>
+                  </label>
+                  <label>
+                      <span class="visually-hidden">Ваш вопрос:</span>
+                      <textarea rows="10" cols="20" name="text" placeholder="Напишите что-нибудь..." required></textarea>
+                  </label>
+                  <button type="submit" class="button button-reply">Отправить</button>
+              </form>
+              <button type="submit" class="close-button">x</button>
           </section>
       </footer>
   </body>
