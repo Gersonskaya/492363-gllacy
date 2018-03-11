@@ -43,7 +43,7 @@
             <section class="filter">
                 <h3 class="visually-hidden">Фильтровать</h3>
                 <!-- Форма с фильтрацией товара (4 шт.) -->
-                <form class="filter" action="#" method="get" oninput="result.value=pricecount.value">
+                <form class="filter" action="#" method="get">
                     <fieldset class="filter-sort">
                         <legend>Сортировать:</legend>
                         <label>
@@ -57,11 +57,13 @@
                         </label>
                     </fieldset>
                     <fieldset class="filter-price">
-                        <legend>Цена: <output name="result">100 - 500</output> руб.</legend>
-                        <label>
-                            <span class="visually-hidden">Диапазон цен:</span>
-                            <input id="pricecount" type="range" min="50" max="650" step="50" name="pricecount">
-                        </label>
+                        <legend>Цена: <span class="result-one">100</span> - <span class="result-two">500</span> руб.</legend>
+                        <input type="hidden" id="min-price">
+                        <input type="hidden" id="max-price">
+                        <div class="price-number">
+                            <div class="number-first"></div>
+                            <div class="number-last"></div>
+                        </div>
                     </fieldset>
                     <fieldset class="filter-fat">
                         <legend>Жирность:</legend>
@@ -213,7 +215,7 @@
                         <span class="visually-hidden">Пароль:</span>
                         <input type="password" name="password" placeholder="Пароль" required>
                     </label>
-                    <button class="button button-login" type="submit">Войти</button>
+                    <button class="button button-login" type="button">Войти</button>
                 </form>
                 <p><a href="#">Забыли пароль?</a></p>
                 <p><a href="#">Новая регистрация</a></p>
@@ -224,14 +226,14 @@
                 <h3 class="visually-hidden">Товары корзины</h3>
                 <table>
                     <tr>
-                        <td><button class="close-button-mini" type="reset">x</button></td>
-                        <td><img class="citrus-image" src="img/citrus.jpg" width="25" height="25" alt=""><p>Пломбир с апельсиновым джемом</p></td>
+                        <td><button class="close-button-mini" type="button">x</button></td>
+                        <td><img class="citrus-image" src="img/buy-icecream-1.jpg" width="25" height="25" alt=""><p>Пломбир с апельсиновым джемом</p></td>
                         <td>1,5 кг х <span>200 руб.</span></td>
                         <td>300 руб.</td>
                     </tr>
                     <tr>
-                        <td><button class="close-button-mini" type="reset">x</button></td>
-                        <td><img class="strawberry-image" src="img/strawberry.jpg" width="25" height="25" alt=""><p>Клубничный ломбир с присыпкой из белого шоколада</p></td>
+                        <td><button class="close-button-mini" type="button">x</button></td>
+                        <td><img class="strawberry-image" src="img/buy-icecream-2.jpg" width="25" height="25" alt=""><p>Клубничный ломбир с присыпкой из белого шоколада</p></td>
                         <td>1,5 кг х <span>300 руб.</span></td>
                         <td>450 руб.</td>
                     </tr>

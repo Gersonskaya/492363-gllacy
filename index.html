@@ -111,7 +111,13 @@
               <h3 class="visually-hidden">Рассылка</h3>
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <!-- Форма отправки эл.почты -->
-              <button type="submit" class="button button-subscribtion">Отправить</button>
+              <form class="send-email" action="#" method="get">
+                  <label>
+                      <span class="visually-hidden">Электронная почта</span>
+                      <input type="email" name="email" placeholder="Электронная почта" required>
+                  </label>
+                  <button type="button" class="button button-subscribtion">Отправить</button>
+              </form>
           </section>
 
           <section class="navigation">
@@ -129,7 +135,7 @@
                   <p>Для заказов по телефону: <br>
                       <span class="phone">8 812 450-25-25</span><br>
                       (с 10 до 20 ежедневно)</p>
-                  <button type="submit" class="button button-contacts">Форма обратной связи</button>
+                  <button type="button" class="button button-contacts">Форма обратной связи</button>
               </div>
           </section>
       </main>
@@ -179,7 +185,7 @@
                       <span class="visually-hidden">Пароль:</span>
                       <input type="password" name="password" placeholder="Пароль" required>
                   </label>
-                  <button class="button button-login" type="submit">Войти</button>
+                  <button class="button button-login" type="button">Войти</button>
               </form>
               <p><a href="#">Забыли пароль?</a></p>
               <p><a href="#">Новая регистрация</a></p>
@@ -201,9 +207,9 @@
                       <span class="visually-hidden">Ваш вопрос:</span>
                       <textarea rows="10" cols="20" name="text" placeholder="Напишите что-нибудь..." required></textarea>
                   </label>
-                  <button type="submit" class="button button-reply">Отправить</button>
+                  <button type="button" class="button button-reply">Отправить</button>
               </form>
-              <button type="submit" class="close-button">x</button>
+              <button type="button" class="close-button">x</button>
           </section>
       </footer>
   </body>
