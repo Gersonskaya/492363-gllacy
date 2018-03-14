@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин &laquo;Глэйси&raquo;</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="./css/normalize.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -12,9 +14,10 @@
                   <img src="img/logo.svg" width="150" height="50" alt="Логотип магазина &laquo;Глэйси&raquo;">
               </a>
               <ul class="site-navigation">
-                  <li class="url-catalog"><a class="url" href="./catalog.html">Каталог</a>
-                      <ul class="sab-menu-catalog">
-                          <li class="new"><a href="#">Новинки</a></li>
+                  <li class="url url-catalog"><a class="url" href="./catalog.html">Каталог</a>
+                      <ul class="sub-menu-catalog">
+                          <li><a class="new" href="#">Новинки</a></li>
+                          <hr class="separator">
                           <li><a href="./catalog.html">Сливочные</a></li>
                           <li><a href="#">Щербеты</a></li>
                           <li><a href="#">Фруктовый лед</a></li>
@@ -40,15 +43,14 @@
           <section class="promo">
               <h3 class="visually-hidden">Промо</h3>
               <div class="index-paginator">
-                  <a class="active" href="index.html#1">1</a>
+                  <a class="promo-active" href="index.html#1">1</a>
                   <a href="index.html#2">2</a>
                   <a href="index.html#3">3</a>
               </div>
               <h1 class="caption">Крем-брюле и пломбир с малиновым джемом</h1>
-              <img class="promo-1" src="http://placehold.it/150x100" alt="Изображение двух рожков мороженного">
               <a class="button button-promo" href="./catalog.html">Давайте оба!</a>
           </section>
-          <!-- Тег img - временное обозначение места изображения. Будет установленно фоном с подсветкой в стилях. -->
+
           <div class="sale">
               <article class="sale-raspberry">
                   <h2>Малинка даром!</h2>
@@ -66,25 +68,25 @@
               <h3 class="visually-hidden">Популярные вкусы</h3>
               <ul>
                   <li class="citrus">
-                      <img class="citrus-image" src="img/citrus.jpg" width="200" height="200" alt="Сливочное мороженное с апельсиновым джемом">
+                      <img class="ice citrus-image" src="img/citrus.jpg" width="250" height="250" alt="Сливочное мороженное с апельсиновым джемом">
                       <img class="hit-image" src="img/hit.svg" width="50" height="50" alt="Хит">
                       <a class="url" href="./catalog.html#citrus">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
                       <p class="citrus-price">310₽<span class="weight">/кг</span></p>
                   </li>
                   <li class="coffee">
-                      <img class="coffee-image" src="img/coffee.jpg" width="200" height="200" alt="Сливочное-кофейное">
+                      <img class="ice coffee-image" src="img/coffee.jpg" width="250" height="250" alt="Сливочное-кофейное">
                       <img class="hit-image" src="img/hit.svg" width="50" height="50" alt="Хит">
                       <a class="url" href="./catalog.html#coffee">Сливочное-кофейное с кусочками шоколада</a>
                       <p class="coffee-price">380₽<span class="weight">/кг</span></p>
                   </li>
                   <li class="strawberry">
-                      <img class="strawberry-image" src="img/strawberry.jpg" width="200" height="200" alt="Сливочное-клубничное">
+                      <img class="ice strawberry-image" src="img/strawberry.jpg" width="250" height="250" alt="Сливочное-клубничное">
                       <img class="hit-image" src="img/hit.svg" width="50" height="50" alt="Хит">
                       <a class="url" href="./catalog.html#strawberry">Сливочное-клубничное с присыпкой из белого шоколада</a>
                       <p class="strawberry-price">355₽<span class="weight">/кг</span></p>
                   </li>
                   <li class="caramel">
-                      <img class="caramel-image" src="img/caramel.jpg" width="200" height="200" alt="Сливочное крем-брюле">
+                      <img class="ice caramel-image" src="img/caramel.jpg" width="250" height="250" alt="Сливочное крем-брюле">
                       <img class="hit-image" src="img/hit.svg" width="50" height="50" alt="Хит">
                       <a class="url" href="./catalog.html#caramel">Сливочное крем-брюле с карамельной подливкой</a>
                       <p class="caramel-price">415₽<span class="weight">/кг</span></p>
@@ -123,19 +125,18 @@
           <section class="navigation">
               <h3 class="visually-hidden">Навигация</h3>
               <div class="navigation-map">
-                  <img src="img/map.jpg" alt="Карта с расположением офлайн-магазина">
+                  <!-- Карта с расположением магазина -->
                   <span class="marker"><img src="img/pin.svg" alt="Маркер"></span>
-              </div>
-
-              <div class="contacts">
-                  <p>Адрес главного офиса <br>
-                      и офлайн-магазина: <br>
-                      <span class="address">ул. Большая Конюшенная <br>
-                          19/8, Санкт-Петербург</span></p>
-                  <p>Для заказов по телефону: <br>
-                      <span class="phone">8 812 450-25-25</span><br>
-                      (с 10 до 20 ежедневно)</p>
-                  <button type="button" class="button button-contacts">Форма обратной связи</button>
+                  <div class="contacts">
+                      <p>Адрес главного офиса <br>
+                          и офлайн-магазина: <br>
+                          <span class="address">ул. Большая Конюшенная <br>
+                              19/8, Санкт-Петербург</span></p>
+                      <p>Для заказов по телефону: <br>
+                          <span class="phone">8 812 450-25-25</span><br>
+                          (с 10 до 20 ежедневно)</p>
+                      <button type="button" class="button button-contacts">Форма обратной связи</button>
+                  </div>
               </div>
           </section>
       </main>
@@ -168,7 +169,7 @@
               <form class="search" action="#" method="get">
                     <label>
                         <span class="visually-hidden">Предмет поиска:</span>
-                        <input type="search" name="search" title="Предмет поиска" placeholder="Что ищем?">
+                        <input class="form-input" type="search" name="search" title="Предмет поиска" placeholder="Что ищем?">
                     </label>
               </form>
           </section>
@@ -179,11 +180,11 @@
               <form class="login" action="#" method="get">
                   <label>
                       <span class="visually-hidden">Электронная почта:</span>
-                      <input type="email" name="email" placeholder="Электронная почта" required>
+                      <input class="form-input" type="email" name="email" placeholder="Электронная почта" required>
                   </label>
                   <label>
                       <span class="visually-hidden">Пароль:</span>
-                      <input type="password" name="password" placeholder="Пароль" required>
+                      <input class="form-input" type="password" name="password" placeholder="Пароль" required>
                   </label>
                   <button class="button button-login" type="button">Войти</button>
               </form>
@@ -197,15 +198,15 @@
               <form class="reply" action="#" method="post">
                   <label>
                       <span class="visually-hidden">Ваше имя:</span>
-                      <input type="text" name="name" placeholder="Как вас зовут?">
+                      <input class="form-input" type="text" name="name" placeholder="Как вас зовут?">
                   </label>
                   <label>
                       <span class="visually-hidden">Ваша почта:</span>
-                      <input type="email" name="email" placeholder="Ваша почта для ответа?" required>
+                      <input class="form-input" type="email" name="email" placeholder="Ваша почта для ответа?" required>
                   </label>
                   <label>
                       <span class="visually-hidden">Ваш вопрос:</span>
-                      <textarea rows="10" cols="20" name="text" placeholder="Напишите что-нибудь..." required></textarea>
+                      <textarea class="form-textarea" rows="10" cols="20" name="text" placeholder="Напишите что-нибудь..." required></textarea>
                   </label>
                   <button type="button" class="button button-reply">Отправить</button>
               </form>
