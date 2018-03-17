@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин &laquo;Глэйси&raquo;</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
     <link href="./css/normalize.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
   </head>
@@ -14,7 +14,7 @@
                   <img src="img/logo.svg" width="150" height="50" alt="Логотип магазина &laquo;Глэйси&raquo;">
               </a>
               <ul class="site-navigation">
-                  <li class="url url-catalog"><a class="url" href="./catalog.html">Каталог</a>
+                  <li class="catalog-active"><a class="url" href="./catalog.html">Каталог</a>
                       <ul class="sub-menu-catalog">
                           <li><a class="new" href="#">Новинки</a></li>
                           <hr class="separator">
@@ -28,9 +28,9 @@
                   <li><a class="url" href="#">О Компании</a></li>
               </ul>
               <ul class="user-navigation">
-                  <li><a href="#">Поиск</a></li>
-                  <li><a href="#">Вход</a></li>
-                  <li class="zero"><a href="#">Корзина</a></li>
+                  <li><a class="user-url" href="#">Поиск</a></li>
+                  <li><a class="user-url" hhref="#">Вход</a></li>
+                  <li><a class="user-url zero" href="#">Корзина</a></li>
               </ul>
           </nav>
           <p class="header-phone">
@@ -69,25 +69,25 @@
               <ul>
                   <li class="citrus">
                       <img class="ice citrus-image" src="img/citrus.jpg" width="250" height="250" alt="Сливочное мороженное с апельсиновым джемом">
-                      <img class="hit-image" src="img/hit.svg" width="50" height="50" alt="Хит">
+                      <img class="hit-image" src="img/hit.svg" width="60" height="60" alt="Хит">
                       <a class="url" href="./catalog.html#citrus">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
                       <p class="citrus-price">310₽<span class="weight">/кг</span></p>
                   </li>
                   <li class="coffee">
                       <img class="ice coffee-image" src="img/coffee.jpg" width="250" height="250" alt="Сливочное-кофейное">
-                      <img class="hit-image" src="img/hit.svg" width="50" height="50" alt="Хит">
+                      <img class="hit-image" src="img/hit.svg" width="60" height="60" alt="Хит">
                       <a class="url" href="./catalog.html#coffee">Сливочное-кофейное с кусочками шоколада</a>
                       <p class="coffee-price">380₽<span class="weight">/кг</span></p>
                   </li>
                   <li class="strawberry">
                       <img class="ice strawberry-image" src="img/strawberry.jpg" width="250" height="250" alt="Сливочное-клубничное">
-                      <img class="hit-image" src="img/hit.svg" width="50" height="50" alt="Хит">
+                      <img class="hit-image" src="img/hit.svg" width="60" height="60" alt="Хит">
                       <a class="url" href="./catalog.html#strawberry">Сливочное-клубничное с присыпкой из белого шоколада</a>
                       <p class="strawberry-price">355₽<span class="weight">/кг</span></p>
                   </li>
                   <li class="caramel">
                       <img class="ice caramel-image" src="img/caramel.jpg" width="250" height="250" alt="Сливочное крем-брюле">
-                      <img class="hit-image" src="img/hit.svg" width="50" height="50" alt="Хит">
+                      <img class="hit-image" src="img/hit.svg" width="60" height="60" alt="Хит">
                       <a class="url" href="./catalog.html#caramel">Сливочное крем-брюле с карамельной подливкой</a>
                       <p class="caramel-price">415₽<span class="weight">/кг</span></p>
                   </li>
@@ -95,7 +95,7 @@
           </section>
 
           <section class="features">
-              <h2 class="features-title">Магазин Глэйси - это онлайн- и офлайн магазин по продаже мороженного собственного производства на развес</h2>
+              <h2 class="features-title">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес</h2>
               <ul class="features-list">
                   <li class="feature-item">Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
                   <li class="feature-item">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотруднечество.</li>
@@ -116,7 +116,7 @@
               <form class="send-email" action="#" method="get">
                   <label>
                       <span class="visually-hidden">Электронная почта</span>
-                      <input type="email" name="email" placeholder="Электронная почта" required>
+                      <input class="form-input" type="email" name="email" placeholder="Электронная почта" required>
                   </label>
                   <button type="button" class="button button-subscribtion">Отправить</button>
               </form>
@@ -156,6 +156,7 @@
               <a class="url" href="#">Наши документы</a>
               <a class="url" href="#">О производстве</a>
               <a class="url" href="#">Экологические стандарты</a>
+              <div class="love"><!-- изображение сердца --></div>
           </div>
 
           <div class="footer-copyright">
@@ -188,8 +189,8 @@
                   </label>
                   <button class="button button-login" type="button">Войти</button>
               </form>
-              <p><a href="#">Забыли пароль?</a></p>
-              <p><a href="#">Новая регистрация</a></p>
+              <a href="#">Забыли пароль?</a><br>
+              <a href="#">Новая регистрация</a>
           </section>
 
           <section class="modal modal-reply">

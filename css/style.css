@@ -5,6 +5,7 @@ body {
     color: #ffffff;
     font-size: 16px;
     line-height: 22px;
+    font-weight: 400;
     background: #859d8f url("./../img/fond-1.jpg") no-repeat 50% 0%; /* первый слой промо */
 
     /*  для интерактива:
@@ -36,12 +37,14 @@ a,
 
 .url {
     font-size: 16px;
+    font-weight: 500;
 }
 
 .button {
     text-decoration: none;
     font-size: 18px;
-    font-weight: bold;
+    line-height: 24px;
+    font-weight: 700;
     padding: 13px 20px;
     border: none;
     border-radius: 50px;
@@ -49,8 +52,24 @@ a,
     box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
 }
 
+.button:hover {
+    background-image: linear-gradient(to top, #ff6f5d, #ff8768);
+    box-shadow: 0 2px 0 0 rgba(172, 16, 0, 0.64);
+}
+
+.button:active {
+    background-image: linear-gradient(to bottom, #e1613b, #d74632);
+    box-shadow: 0 -2px 0 0 rgba(172, 16, 0, 0.64);
+}
+
+.button-promo {
+    font-size: 32px;
+    padding: 17px 39px;
+}
+
 .button-filter {
     font-size: 16px;
+    font-weight: 500;
     color: #ffffff;
     border: 2px solid #ffffff;
     border-radius: 20px;
@@ -67,22 +86,7 @@ a,
 .button-filter:active {
     border: none;
     background-color: #ededed;
-    box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1)
-}
-
-.button-promo {
-    font-size: 32px;
-    padding: 17px 39px;
-}
-
-.button:hover {
-    background-image: linear-gradient(to top, #ff6f5d, #ff8768);
-    box-shadow: 0 2px 0 0 rgba(172, 16, 0, 0.64);
-}
-
-.button:active {
-    background-image: linear-gradient(to bottom, #e1613b, #d74632);
-    box-shadow: 0 -2px 0 0 rgba(172, 16, 0, 0.64);
+    box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 1)
 }
 
 .url:hover,
@@ -95,12 +99,13 @@ a,
 .modal-login a:hover,
 .modal-login a:active {
     color: #e84d37;
+    font-weight: 400;
 }
 
-.main-nav .header-phone,
+.main-nav,
 .main-footer a {
     line-height: 18px;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .main-footer .url {
@@ -110,14 +115,14 @@ a,
 .main-nav .site-navigation > li,
 .main-nav .user-navigation > li,
 .new,
-li.url-catalog,
+li.catalog-active,
 .main-footer a{
-    font-weight: bold;
+    font-weight: 700;
 }
 
-.url-catalog ul {
+.catalog-active ul {
     font-size: 14px;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .site-navigation li {
@@ -140,7 +145,7 @@ li.url-catalog,
     box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.8);
 }
 
-.site-navigation .menu-active a {
+.catalog-active .url{
     text-decoration: none;
     border-radius: 50px;
     background: #d07058;
@@ -148,9 +153,8 @@ li.url-catalog,
 
 .sub-menu-catalog {
     width: 126px;
-    height: 153px;
     padding: 0;
-    margin: 0;
+    margin: 10px 0;
     background-color: #f8f7f4;
     border-radius: 5px;
     border: 9px solid #f8f7f4;
@@ -167,11 +171,19 @@ li.url-catalog,
 }
 
 .sub-menu-catalog li:hover {
-    background-color: rgb(251, 222, 215);
+    background-color: #fbdEd7;
 }
 
 .sub-menu-catalog li:active {
-    background-color: rgb(246, 181, 165);
+    background-color: #f6b5a5;
+}
+
+.sub-menu-catalog .milk-active {
+    background-color: #ea7056;
+}
+
+.milk-active a{
+    color: #ffffff;
 }
 
 .separator {
@@ -185,11 +197,19 @@ li.url-catalog,
     font-size: 14px;
 }
 
-.user-navigation li {
-    margin: 7px 0; /* временный атрибут */
+.sub-menu-catalog .milk-active {
+    background-color: #ea7056;
 }
 
-.user-navigation > li > a {
+.milk-active a{
+    color: #ffffff;
+}
+
+.user-navigation li {
+    margin: 10px 0; /* временный атрибут */
+}
+
+.user-navigation .user-url {
     font-size: 14px;
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.2);
@@ -197,29 +217,36 @@ li.url-catalog,
     padding: 5px 15px; /* размер кнопок пользовательского меню */
 }
 
-.user-navigation > li > a:hover {
+.user-navigation .user-url:hover {
     color: #323232;
     background-color: rgba(248, 247, 244, 0.98);
 }
 
-.main-footer p,
-.footer-copyright p {
-    font-size: 13px;
+.header-phone {
+    text-align: right;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
 }
 
-.main-header p {
-    text-align: right;
+.header-phone span {
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.breadcrumbs a {
+    font-size: 14px;
 }
 
 h1.caption {
     font-size: 60px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 60.35px;
 }
 
 h1.caption-catalog {
     font-size: 35px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 41px;
 }
 
@@ -228,6 +255,8 @@ h1.caption-catalog {
     width: 560px;
     height: 230px;
     font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
     border-radius: 15px;
     background-color: #000000;
 }
@@ -247,6 +276,7 @@ h1.caption-catalog {
 
 .sale .button {
     font-size: 18px;
+    line-height: 24px;
 }
 
 .hit img,
@@ -257,16 +287,20 @@ h1.caption-catalog {
 
 .hit p,
 .price-list p {
-    font-size: 45px;
-    font-weight: bold;
+    font-size: 50px;
+    font-weight: 700;
 }
 
 .weight {
-    font-size: 30px;
+    font-size: 35px;
 }
 
-.hit a {
+.hit a,
+.price-list a {
     text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
 }
 
 .hit li:hover {
@@ -287,7 +321,7 @@ h1.caption-catalog {
 
 .features .features-title {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 500;
     line-height: 30px;
 }
 
@@ -299,9 +333,13 @@ h1.caption-catalog {
     border-radius: 15px;
 }
 
-.blog .blog-title a{
+.blog-description {
+    font-weight: 500;
+}
+
+.blog-title a {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 30px;
     color: #323232;
     background-color: rgba(255, 255, 255, 0.8);
@@ -334,15 +372,9 @@ h1.caption-catalog {
     border-radius: 15px;
 }
 
-.main-header .header-phone {
-    font-size: 14px;
-    line-height: 16px;
-}
-
-.contacts span,
-.header-phone span {
+.contacts span {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 24px;
 }
 
@@ -352,14 +384,28 @@ h1.caption-catalog {
     border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
-.social-button img:hover {
+.social-button:hover img {
     opacity: 1;
     border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-.social-button img:active {
+.social-button:active img {
     opacity: 0.6;
     border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.main-footer .url {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.footer-documents .url:first-child {
+    font-weight: 700;
+}
+
+.main-footer p,
+.footer-copyright {
+    font-size: 12px;
 }
 
 .modal {
@@ -379,7 +425,10 @@ h1.caption-catalog {
 
 .modal-login a {
     color: #323232;
-    line-height: 24px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    padding-top: 0;
 }
 
 .modal-reply {
@@ -390,25 +439,45 @@ h1.caption-catalog {
 .modal-buy {
     width: 540px;
     border-radius: 5px;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.modal-buy span {
+    opacity: 0.5;
 }
 
 .modal-buy .sum {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
     text-align: right;
 }
 
 .modal-card {
     width: 293px;
     height: 405px;
-    background-color: rgba(248,247,244, 0.2);
+    background-color: rgba(248, 247, 244, 0.2);
     border-radius: 5px;
 }
 
 .form-input,
 .form-textarea {
+    padding: 10px 10px;
+    font-weight: 700;
     border-radius: 5px;
     border: 1px solid #b2b2b2;
     opacity: 0.7;
-    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+.form-input {
+    width: 250px;
+    height: 40px;
+}
+.form-textarea {
+    width: 250px;
+    height: 200px;
 }
 
 .form-input:hover,
@@ -423,11 +492,7 @@ h1.caption-catalog {
     opacity: 1;
 }
 
-.form-input:checked,
-.form-textarea:checked {
-    font-weight: bold;
-}
-
-input:not(:placeholder-shown) {
-    font-weight: bold;
+.form-input::placeholder,
+.form-textarea::placeholder {
+    font-weight: 400;
 }
