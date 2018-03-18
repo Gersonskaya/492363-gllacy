@@ -115,12 +115,12 @@ a,
 .main-nav .site-navigation > li,
 .main-nav .user-navigation > li,
 .new,
-li.catalog-active,
+li.catalog,
 .main-footer a{
     font-weight: 700;
 }
 
-.catalog-active ul {
+.catalog ul {
     font-size: 14px;
     font-weight: 400;
 }
@@ -211,6 +211,7 @@ li.catalog-active,
 
 .user-navigation .user-url {
     font-size: 14px;
+    font-weight: 500;
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50px;
@@ -350,11 +351,11 @@ h1.caption-catalog {
     height: 220px;
     color: #323232;
     background-image: url("./../img/bg-post-2.svg"),
-                      url("./../img/bg-post.svg");
+    url("./../img/bg-post.svg");
     background-repeat: no-repeat,
-                       no-repeat;
+    no-repeat;
     background-position: 50% 50%,
-                         50% 50%;
+    50% 50%;
     border-radius: 15px;
 }
 
@@ -400,7 +401,7 @@ h1.caption-catalog {
 }
 
 .footer-documents .url:first-child {
-    font-weight: 700;
+ font-weight: 700;
 }
 
 .main-footer p,
