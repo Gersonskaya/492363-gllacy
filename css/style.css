@@ -1,20 +1,34 @@
 body {
     font-family: "Roboto", "Arial", sans-serif;
-    margin: 0;
-    padding: 0;
     color: #ffffff;
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
-    background: #859d8f url("./../img/fond-1.jpg") no-repeat 50% 0%; /* первый слой промо */
+    padding: 0;
+    padding-top: 10px;
+    background: #859d8f url("./../img/fond-1.jpg") no-repeat 50% 0; /* первый слой промо */
+ /*   background: #859d8f url("./../preview/gllacy-index-1200.jpg") no-repeat 50% 0; */
+    /*      шаблон страницы    */
 
     /*  для интерактива:
         второй слой промо #8996a6 url("./../img/fond-2.jpg") no-repeat 50% 0%
         третий слой промо #9d8b84 url("./../img/fond-3.jpg") no-repeat 50% 0%   */
 }
 
+.big-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
 body.catalog {
     background: #859d8f url("./../img/fond-catalog.jpg") repeat-x;
+/*    background: #859d8f url("./../preview/gllacy-catalog-1200.jpg") no-repeat 50% 0;  */
+        /*      шаблон страницы    */
+}
+
+.visually-hidden {
+    visibility: hidden;
+    position: absolute;
 }
 
 .main-nav .site-navigation,
@@ -63,11 +77,19 @@ a,
 }
 
 .button-promo {
+    position: absolute;
+    bottom: 40px;
     font-size: 32px;
     padding: 17px 39px;
+    height: 31px;
+    justify-content: flex-end;
+    align-items: center;
+    align-self: center;
 }
 
 .button-filter {
+    position: relative;
+    bottom: -20px;
     font-size: 16px;
     font-weight: 500;
     color: #ffffff;
@@ -75,7 +97,7 @@ a,
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.2);
     width: 148px;
-    height: 41px;
+    height: 38px;
 }
 
 .button-filter:hover {
@@ -91,6 +113,8 @@ a,
 
 .url:hover,
 .url:active,
+.breadcrumbs a:hover,
+.breadcrumbs a:active,
 .price-list a:hover,
 .price-list a:active {
     color: #ffbc9e;
@@ -100,6 +124,20 @@ a,
 .modal-login a:active {
     color: #e84d37;
     font-weight: 400;
+}
+
+.main-header {
+/*    outline: 3px solid lightyellow;   */
+    /*  временная рамка     */
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+/*    outline: 2px solid orangered;     */
+/*  временная рамка     */
+    align-items: center;
 }
 
 .main-nav,
@@ -115,8 +153,7 @@ a,
 .main-nav .site-navigation > li,
 .main-nav .user-navigation > li,
 .new,
-li.catalog,
-.main-footer a{
+li.catalog {
     font-weight: 700;
 }
 
@@ -126,7 +163,9 @@ li.catalog,
 }
 
 .site-navigation li {
-    margin: 7px 0; /* временный атрибут */
+    position: relative;
+    display: inline-block;
+    margin-left: -4px;
 }
 
 .site-navigation > li > a {
@@ -151,10 +190,22 @@ li.catalog,
     background: #d07058;
 }
 
+.site-navigation a {
+    display: block;
+    margin-left: -1px;
+}
+
+.site-navigation > li:hover .sub-menu-catalog {
+    display: block;
+}
+
 .sub-menu-catalog {
+    position: absolute;
+    left: 1px;
+    display: none;
     width: 126px;
+    margin: 0 -10px;
     padding: 0;
-    margin: 10px 0;
     background-color: #f8f7f4;
     border-radius: 5px;
     border: 9px solid #f8f7f4;
@@ -182,10 +233,6 @@ li.catalog,
     background-color: #ea7056;
 }
 
-.milk-active a{
-    color: #ffffff;
-}
-
 .separator {
     padding: 0;
     margin: 0;
@@ -201,12 +248,18 @@ li.catalog,
     background-color: #ea7056;
 }
 
-.milk-active a{
+.milk-active a {
     color: #ffffff;
 }
 
+.user-navigation {
+    float: right;
+/*    outline: 2px solid yellow;    */
+    /*  временная рамка     */
+}
+
 .user-navigation li {
-    margin: 10px 0; /* временный атрибут */
+    display: inline-block;
 }
 
 .user-navigation .user-url {
@@ -224,6 +277,11 @@ li.catalog,
 }
 
 .header-phone {
+    position: relative;
+    bottom: 31px;
+    right: 27px;
+/*    margin-right: 25px;       к следующему заданию    */
+    margin: 0;
     text-align: right;
     font-size: 14px;
     font-weight: 700;
@@ -232,34 +290,142 @@ li.catalog,
 
 .header-phone span {
     font-size: 22px;
-    line-height: 24px;
+    line-height: 30px;
+}
+
+.breadcrumbs {
+    display: inline-block;
+    position: relative;
+    top: 18px;
+    left: 26px;
 }
 
 .breadcrumbs a {
+    float: left;
     font-size: 14px;
 }
 
+.breadcrumbs a::after {
+    content: "»";
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.breadcrumbs .url-active {
+    text-decoration: none;
+}
+
+.breadcrumbs .url-active::after {
+    display: none;
+}
+
+.promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    min-height: 500px;
+/*    outline: 3px solid greenyellow;   */
+    /*  временная рамка     */
+}
+
+.index-paginator {
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 50px;
+}
+
 h1.caption {
+    position: absolute;
+    bottom: 90px;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
     font-size: 60px;
     font-weight: 700;
     line-height: 60.35px;
+    text-align: center;
 }
 
 h1.caption-catalog {
     font-size: 35px;
     font-weight: 700;
     line-height: 41px;
+    margin: 0;
+}
+
+form.filter {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-sort,
+.filter-price,
+.filter-fat,
+.filter-fillings {
+    border: none;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.filter-sort select {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 6px 13px;
+    background-color: rgba(248, 247, 244, 0.2);
+    border-radius: 50px;
+    height: 38px;
+}
+
+.filter-price div.price-number {
+    font-size: 16px;
+    line-height: 18px;
+/*    padding: 6px 13px;    */
+    background-color: rgba(248, 247, 244, 0.2);
+    border-radius: 50px;
+    width: 200px;
+    height: 38px;
+}
+
+.filter-fat .fat {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 13px;
+    background-color: rgba(248, 247, 244, 0.2);
+    border-radius: 50px;
+    height: 10px;
+}
+
+.filter-fillings .fillings-type {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 13px;
+    background-color: rgba(248, 247, 244, 0.2);
+    border-radius: 50px;
+    height: 10px;
+}
+
+.sale,
+.sweet-news {
+    display: flex;
+    justify-content: center;
+    padding: 0;
 }
 
 .sale-raspberry,
 .sale-chocolate {
+    position: relative;
     width: 560px;
     height: 230px;
     font-size: 18px;
     font-weight: 700;
     line-height: 22px;
     border-radius: 15px;
-    background-color: #000000;
 }
 
 .sale-raspberry {
@@ -273,22 +439,64 @@ h1.caption-catalog {
 .sale h2 {
     font-size: 35px;
     line-height: 41px;
+    margin: 0;
 }
 
-.sale .button {
+.button-sale {
+    position: absolute;
+    top: 160px;
+    right: 20px;
     font-size: 18px;
     line-height: 24px;
 }
 
-.hit img,
-.price-list img,
+.hit > ul,
+.price-list > ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.price-list ul {
+    flex-wrap: wrap;
+}
+
+.hit li,
+.price-list li {
+    position: relative;
+    width: 267px;
+    text-align: center;
+    margin-top: 30px;
+/*    outline: 2px solid darkblue;    /*   временная рамка   */
+}
+
+.price-list li:hover {
+    position: relative;
+    width: 293px;
+    height: 405px;
+    background-color: rgba(248,247,244, 0.2);
+    border-radius: 5px;
+}
+
+.hit .ice,
+.price-list .ice,
 .modal-buy img {
     border-radius: 50%;
 }
 
+.hit-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .hit p,
 .price-list p {
-    font-size: 50px;
+    position: absolute;
+    top: 180px;
+    left: 0;
+    font-size: 40px;
     font-weight: 700;
 }
 
@@ -296,21 +504,11 @@ h1.caption-catalog {
     font-size: 35px;
 }
 
-.hit a,
-.price-list a {
-    text-align: center;
+.hit > li > a,
+.price-list > li > a {
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
-}
-
-.hit li:hover {
-    /*
-    width: 293px;
-    height: 405px;
-    background-color: rgba(248,247,244, 0.2);
-    border-radius: 5px;
-    */
 }
 
 .features {
@@ -318,12 +516,23 @@ h1.caption-catalog {
     color: #323232;
     background: #eee0c7 url("./../img/features-fond.png") no-repeat;
     border-radius: 15px;
+    padding: 0;
+    margin: 0;
 }
 
 .features .features-title {
     font-size: 24px;
     font-weight: 500;
     line-height: 30px;
+}
+
+.features-list {
+    padding: 0;
+}
+
+.sweet-news {
+    display: flex;
+    justify-content: center;
 }
 
 .blog {
@@ -360,10 +569,20 @@ h1.caption-catalog {
 }
 
 .navigation-map {
+    position: relative;
     background: url("./../img/map.jpg") no-repeat 0 0;
 }
 
+.marker {
+    position: relative;
+    top: 140px;
+    left: 268px;
+}
+
 .contacts {
+    position: relative;
+    top: -95px;
+    left: 870px;
     width: 300px;
     height: 305px;
     font-size: 14px;
@@ -377,6 +596,66 @@ h1.caption-catalog {
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.catalog-paginator {
+    width: auto;
+    height: 135px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 19px;
+}
+
+.paginator {
+    float: right;
+    position: relative;
+    top: 80px;
+}
+
+.paginator a {
+    width: 20px;
+    height: 20px;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.paginator a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+.paginator a:active,
+.paginator .active {
+    background-color: #ffffff;
+    border-radius: 50%;
+    color: #3b3b3b;
+    font-weight: 500;
+}
+
+.footer-documents {
+    position: relative;
+    height: 45px;
+    columns: 160px auto;
+    margin-right: 120px;
+}
+
+.love {
+    position: absolute;
+    top: 4px;
+    left: -22px;
+}
+
+.footer-social ul {
+    padding: 0;
+}
+
+.footer-social li {
+    display: inline-block;
 }
 
 .social-button img {
@@ -395,13 +674,8 @@ h1.caption-catalog {
     border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-.main-footer .url {
-    font-size: 13px;
-    font-weight: 400;
-}
-
 .footer-documents .url:first-child {
- font-weight: 700;
+    font-weight: 700;
 }
 
 .main-footer p,
@@ -409,7 +683,12 @@ h1.caption-catalog {
     font-size: 12px;
 }
 
+.footer-copyright {
+    float: right;
+}
+
 .modal {
+    display: none;
     color: #323232;
     background-color: #f8f7f4;
 }
