@@ -1,4 +1,5 @@
 body {
+    min-width: 1147px;
     font-family: "Roboto", "Arial", sans-serif;
     color: #ffffff;
     font-size: 16px;
@@ -15,8 +16,9 @@ body {
         третий слой промо #9d8b84 url("./../img/fond-3.jpg") no-repeat 50% 0%   */
 }
 
-.big-container {
-    width: 1200px;
+.big-container,
+.min-container {
+    width: 1147px;
     margin: 0 auto;
 }
 
@@ -31,27 +33,19 @@ body.catalog {
     position: absolute;
 }
 
-.main-nav .site-navigation,
-.main-nav .user-navigation,
-.sub-menu-catalog > li,
-.hit ul,
-.price-list ul,
-.features ul,
-.footer-social ul,
-.breadcrumbs ul {
-    list-style: none;
-}
-
 a,
-.button,
-.hit p,
-.price-list p {
+.button {
     color: #ffffff;
 }
 
 .url {
     font-size: 16px;
     font-weight: 500;
+}
+
+.url:hover,
+.url:active {
+    color: #ffbc9e;
 }
 
 .button {
@@ -111,21 +105,6 @@ a,
     box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 1)
 }
 
-.url:hover,
-.url:active,
-.breadcrumbs a:hover,
-.breadcrumbs a:active,
-.price-list a:hover,
-.price-list a:active {
-    color: #ffbc9e;
-}
-
-.modal-login a:hover,
-.modal-login a:active {
-    color: #e84d37;
-    font-weight: 400;
-}
-
 .main-header {
 /*    outline: 3px solid lightyellow;   */
     /*  временная рамка     */
@@ -134,20 +113,19 @@ a,
 .main-nav {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
 /*    outline: 2px solid orangered;     */
 /*  временная рамка     */
     align-items: center;
-}
-
-.main-nav,
-.main-footer a {
     line-height: 18px;
     font-weight: 400;
 }
 
 .main-footer .url {
     font-size: 13px;
+}
+
+.main-nav .site-navigation {
+    list-style: none;
 }
 
 .main-nav .site-navigation > li,
@@ -212,6 +190,7 @@ li.catalog {
 }
 
 .sub-menu-catalog li {
+    list-style: none;
     padding: 4px 12px;
     margin: 0;
 }
@@ -253,7 +232,8 @@ li.catalog {
 }
 
 .user-navigation {
-    float: right;
+    list-style: none;
+    margin-left: auto;
 /*    outline: 2px solid yellow;    */
     /*  временная рамка     */
 }
@@ -277,9 +257,6 @@ li.catalog {
 }
 
 .header-phone {
-    position: relative;
-    bottom: 31px;
-    right: 27px;
 /*    margin-right: 25px;       к следующему заданию    */
     margin: 0;
     text-align: right;
@@ -293,15 +270,11 @@ li.catalog {
     line-height: 30px;
 }
 
-.breadcrumbs {
-    display: inline-block;
-    position: relative;
-    top: 18px;
-    left: 26px;
+.breadcrumbs ul {
+    list-style: none;
 }
 
 .breadcrumbs a {
-    float: left;
     font-size: 14px;
 }
 
@@ -309,6 +282,11 @@ li.catalog {
     content: "»";
     display: inline-block;
     margin: 0 8px;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:active {
+    color: #ffbc9e;
 }
 
 .breadcrumbs .url-active {
@@ -333,8 +311,6 @@ li.catalog {
 .index-paginator {
     justify-content: flex-end;
     align-items: flex-start;
-    position: absolute;
-    bottom: 50px;
 }
 
 h1.caption {
@@ -353,12 +329,19 @@ h1.caption-catalog {
     font-size: 35px;
     font-weight: 700;
     line-height: 41px;
-    margin: 0;
+    margin-top: 0;
 }
 
 form.filter {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.filter .filter-sort,
+.filter .filter-fillings {
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .filter-sort,
@@ -401,6 +384,10 @@ form.filter {
     height: 10px;
 }
 
+.filter-fillings {
+    padding-bottom: 0;
+}
+
 .filter-fillings .fillings-type {
     font-size: 16px;
     line-height: 18px;
@@ -410,16 +397,19 @@ form.filter {
     height: 10px;
 }
 
-.sale,
-.sweet-news {
+.sale {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0;
+    margin: 0;
+    margin-bottom: 40px;
 }
 
 .sale-raspberry,
 .sale-chocolate {
     position: relative;
+    top: 0;
+    left: 0;
     width: 560px;
     height: 230px;
     font-size: 18px;
@@ -450,16 +440,17 @@ form.filter {
     line-height: 24px;
 }
 
+.hit {
+    margin-bottom: 40px;
+}
+
 .hit > ul,
 .price-list > ul {
     display: flex;
-    justify-content: space-around;
-    margin: 0;
+    justify-content: space-between;
+    list-style: none;
     padding: 0;
-}
-
-.price-list ul {
-    flex-wrap: wrap;
+    margin: 0;
 }
 
 .hit li,
@@ -467,16 +458,24 @@ form.filter {
     position: relative;
     width: 267px;
     text-align: center;
-    margin-top: 30px;
 /*    outline: 2px solid darkblue;    /*   временная рамка   */
 }
 
-.price-list li:hover {
+.price-list ul {
+    flex-wrap: wrap;
+}
+
+.price-list li {
+    margin-bottom: 40px;
+}
+
+.price-list li:hover {  /*
     position: relative;
     width: 293px;
     height: 405px;
     background-color: rgba(248,247,244, 0.2);
     border-radius: 5px;
+    */
 }
 
 .hit .ice,
@@ -498,6 +497,7 @@ form.filter {
     left: 0;
     font-size: 40px;
     font-weight: 700;
+    color: #ffffff;
 }
 
 .weight {
@@ -511,28 +511,46 @@ form.filter {
     font-weight: 500;
 }
 
+.price-list a:hover,
+.price-list a:active {
+    color: #ffbc9e;
+}
+
 .features {
-    width: 1145px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1147px;
     color: #323232;
-    background: #eee0c7 url("./../img/features-fond.png") no-repeat;
+    background: #eee0c7 url("./../img/features-fond.png") repeat;
     border-radius: 15px;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.features ul {
+    list-style: none;
 }
 
 .features .features-title {
     font-size: 24px;
     font-weight: 500;
     line-height: 30px;
+    padding: 0;
+    margin: 0;
 }
 
 .features-list {
     padding: 0;
+    margin: 0;
 }
 
 .sweet-news {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 40px;
 }
 
 .blog {
@@ -560,12 +578,19 @@ form.filter {
     height: 220px;
     color: #323232;
     background-image: url("./../img/bg-post-2.svg"),
-    url("./../img/bg-post.svg");
+                      url("./../img/bg-post.svg");
     background-repeat: no-repeat,
-    no-repeat;
+                       no-repeat;
     background-position: 50% 50%,
-    50% 50%;
+                         50% 50%;
     border-radius: 15px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1200px;
 }
 
 .navigation-map {
@@ -598,12 +623,6 @@ form.filter {
     line-height: 24px;
 }
 
-.main-footer {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-}
-
 .catalog-paginator {
     width: auto;
     height: 135px;
@@ -612,7 +631,6 @@ form.filter {
 }
 
 .paginator {
-    float: right;
     position: relative;
     top: 80px;
 }
@@ -637,6 +655,17 @@ form.filter {
     font-weight: 500;
 }
 
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.main-footer a {
+    line-height: 18px;
+    font-weight: 400;
+}
+
 .footer-documents {
     position: relative;
     height: 45px;
@@ -652,6 +681,7 @@ form.filter {
 
 .footer-social ul {
     padding: 0;
+    list-style: none;
 }
 
 .footer-social li {
@@ -684,7 +714,6 @@ form.filter {
 }
 
 .footer-copyright {
-    float: right;
 }
 
 .modal {
@@ -709,6 +738,12 @@ form.filter {
     font-weight: 400;
     line-height: 16px;
     padding-top: 0;
+}
+
+.modal-login a:hover,
+.modal-login a:active {
+    color: #e84d37;
+    font-weight: 400;
 }
 
 .modal-reply {
