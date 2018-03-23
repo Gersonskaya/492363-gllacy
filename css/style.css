@@ -504,8 +504,8 @@ form.filter {
     font-size: 35px;
 }
 
-.hit > li > a,
-.price-list > li > a {
+.hit .product-title,
+.price-list .product-title {
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
