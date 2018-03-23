@@ -589,13 +589,11 @@ form.filter {
 .navigation {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    width: 1200px;
 }
 
 .navigation-map {
     position: relative;
-    background: url("./../img/map.jpg") no-repeat 0 0;
+    background: url("./../img/map.jpg") repeat-x 0 0;
 }
 
 .marker {
