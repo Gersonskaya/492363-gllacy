@@ -107,6 +107,7 @@ a,
     display: flex;
     list-style: none;
     padding-left: 7px;
+    margin-bottom: 0;
 }
 
 .site-navigation .catalog,
@@ -114,6 +115,7 @@ a,
     position: relative;
     top: 0;
     left: 0;
+    padding-bottom: 16px;
 }
 
 .site-navigation > li {
@@ -155,7 +157,7 @@ a,
 
 .sub-menu-catalog {
     position: absolute;
-    top: 23px;
+    top: 30px;
     left: -7px;
     display: none;
     width: 143px;
@@ -210,11 +212,13 @@ a,
     margin-left: auto;
     display: flex;
     list-style: none;
+    margin-bottom: 0;
 }
 
 .user-navigation li {
     font-weight: 700;
     margin-left: 11px;
+    padding-bottom: 16px;
 }
 
 .user-navigation a {
@@ -264,7 +268,7 @@ a,
 .modal-search {
     display: none;      /*  скрытая форма поиска   */
     position: absolute;
-    top: 55px;
+    top: 60px;
     left: 50%;
     margin-left: 3px;
     border-radius: 5px;
@@ -299,7 +303,7 @@ a,
 .modal-login {
     display: none;      /*  скрытая форма авторизации   */
     position: absolute;
-    top: 55px;
+    top: 60px;
     left: 50%;
     margin-left: 170px;
     width: 277px;
@@ -374,7 +378,7 @@ a,
 .modal-buy {
     display: none;  /*  скрытая корзина */
     position: absolute;
-    top: 55px;
+    top: 60px;
     left: 50%;
     margin-left: 33px;
     width: 540px;
@@ -1232,6 +1236,7 @@ a,
     position: relative;
     top: 140px;
     left: 268px;
+    width: 218px;
 }
 
 .contacts {
@@ -1247,11 +1252,11 @@ a,
     border-radius: 15px;
     padding: 30px 25px;
 }
-
+/*
 .contacts p {
     margin: 0;
     margin-bottom: 20px;
-}
+}*/
 
 .contacts span {
     font-size: 18px;
@@ -1425,11 +1430,6 @@ li.heart::after {
     line-height: 18px;
     font-weight: 400;
     margin-top: -2px;
-}
-
-.modal {
-    color: #323232;
-/*    display: none;      /*  все формы в скрытом состоянии    */
 }
 
 .over-layer {
