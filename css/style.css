@@ -5,14 +5,10 @@ body {
     font-size: 16px;
     font-weight: 400;
     padding: 0;
- /*   background: #859d8f url("./../preview/gllacy-index-1200.jpg") no-repeat 50% 0; */
-    /*      шаблон страницы    */
 }
 
 body.catalog {
     background: #859d8f url("./../img/fond-catalog.jpg") repeat-x;
-    /*    background: #859d8f url("./../preview/gllacy-catalog-1200.jpg") no-repeat 50% 0;  */
-    /*      шаблон страницы    */
 }
 
 .site-wrapper {
@@ -20,10 +16,22 @@ body.catalog {
     background-image: url("./../img/fond-1.jpg");
     background-repeat: no-repeat;
     background-position: 50% 0;
+    transition: background-image 0.5s ease, background-color 0.5s ease;
 }
-/*  для интерактива:
-    второй слой промо #8996a6 url("./../img/fond-2.jpg") no-repeat 50% 0%
-    третий слой промо #9d8b84 url("./../img/fond-3.jpg") no-repeat 50% 0%   */
+
+.site-wrapper::before,
+.site-wrapper::after {
+    content: "";
+    visibility: hidden;
+}
+
+.site-wrapper::before {
+    background-image: url("./../img/fond-2.jpg");
+}
+
+.site-wrapper::after {
+    background-image: url("./../img/fond-3.jpg");
+}
 
 .big-container,
 .min-container {
@@ -123,7 +131,7 @@ a,
 }
 
 .site-navigation .nav-url {
-    padding: 7px 14px; /* размер кнопок главного меню */
+    padding: 7px 14px;
 }
 
 .site-navigation .nav-url:hover {
@@ -253,7 +261,7 @@ a,
 }
 
 .user-navigation .search {
-    padding: 7px 16px;   /* размер кнопок пользовательского меню / поиск */
+    padding: 7px 16px;
 }
 
 .search::after {
@@ -266,7 +274,7 @@ a,
 }
 
 .modal-search {
-    display: none;      /*  скрытая форма поиска   */
+    display: none;
     position: absolute;
     top: 60px;
     left: 50%;
@@ -289,7 +297,7 @@ a,
 
 .user-navigation .login {
     padding: 8px 15px;
-    padding-left: 45px;   /* размер кнопок пользовательского меню / вход в лк */
+    padding-left: 45px;
 }
 
 .login::after {
@@ -301,7 +309,7 @@ a,
 }
 
 .modal-login {
-    display: none;      /*  скрытая форма авторизации   */
+    display: none;
     position: absolute;
     top: 60px;
     left: 50%;
@@ -353,7 +361,7 @@ a,
 .user-navigation .basket {
     width: 118px;
     padding: 8px 32px;
-    padding-left: 45px;   /* размер кнопок пользовательского меню / пустая корзина */
+    padding-left: 45px;
 }
 
 .basket::after {
@@ -366,7 +374,7 @@ a,
 
 .user-navigation .two-goods {
     padding: 7px 17px;
-    padding-left: 44px;   /* размер кнопок пользовательского меню / корзина с товарами */
+    padding-left: 44px;
     color: #323232;
     background-color: rgba(248, 247, 244, 0.98);
 }
@@ -376,7 +384,7 @@ a,
 }
 
 .modal-buy {
-    display: none;  /*  скрытая корзина */
+    display: none;
     position: absolute;
     top: 60px;
     left: 50%;
@@ -562,6 +570,21 @@ a,
     cursor: pointer;
 }
 
+  #product-1:checked ~ .site-wrapper {
+    background-color: #849d8f;
+    background-image: url("./../img/fond-1.jpg");
+}
+
+#product-2:checked ~ .site-wrapper {
+    background-color: #8996a6;
+    background-image: url("./../img/fond-2.jpg");
+}
+
+#product-3:checked ~ .site-wrapper {
+    background-color: #9d8b84;
+    background-image: url("./../img/fond-3.jpg");
+}
+
 #product-1:checked ~ .site-wrapper #promo1,
 #product-2:checked ~ .site-wrapper #promo2,
 #product-3:checked ~ .site-wrapper #promo3 {
@@ -652,6 +675,10 @@ a,
     border-radius: 50px;
     height: 38px;
     -webkit-appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
 }
 
 .filter-sort select:hover {
@@ -819,8 +846,6 @@ a,
 }
 
 .filter-fillings {
-    display: flex;
-    align-items: center;
     padding-bottom: 0;
 }
 
@@ -1252,11 +1277,6 @@ a,
     border-radius: 15px;
     padding: 30px 25px;
 }
-/*
-.contacts p {
-    margin: 0;
-    margin-bottom: 20px;
-}*/
 
 .contacts span {
     font-size: 18px;
@@ -1433,7 +1453,7 @@ li.heart::after {
 }
 
 .over-layer {
-    display: none;   /*  скрытая форма обратной связи + затемнение страницы   */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
