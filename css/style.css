@@ -675,6 +675,8 @@ a,
     border-radius: 50px;
     height: 38px;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 select::-ms-expand {
