@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 
-body.catalog {
+body.bg-catalog {
     background: #859d8f url("./../img/fond-catalog.jpg") repeat-x;
 }
 
@@ -152,7 +152,8 @@ a,
     border-bottom: 1px solid transparent;
 }
 
-.site-navigation > li:hover .sub-menu-catalog {
+.catalog:hover .sub-menu-catalog,
+.catalog-active:hover .sub-menu-catalog {
     display: block;
 }
 
@@ -179,19 +180,16 @@ a,
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
+.sub-menu-catalog .new {
+    border-bottom: 1px solid #d1d0ce;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
 .sub-menu-catalog li {
     list-style: none;
     padding: 6px 20px;
     margin: 4px 0;
-}
-
-.sub-menu-catalog .new {
-    border-bottom: 1px solid #d1d0ce;
-    padding-bottom: 10px;
-}
-
-.sub-menu-catalog > .new > a {
-    font-weight: 700;
 }
 
 .sub-menu-catalog li:hover {
@@ -496,6 +494,7 @@ a,
 .breadcrumbs .url::after {
     content: "»";
     display: inline-block;
+    vertical-align: middle;
     margin: 0 6px;
     color: #ffffff;
 }
@@ -616,7 +615,7 @@ a,
 }
 
 .filter-block {
-    margin-bottom: 25px;
+    margin-bottom: 26px;
 }
 
 .filter {
@@ -662,17 +661,17 @@ a,
 
 .filter-sort select {
     position: relative;
-    top: 0;
+    bottom: 0;
     left: 0;
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
     color: #ffffff;
     padding: 6px 16px;
-    padding-right: 33px;
     background-color: rgba(248, 247, 244, 0.2);
     border: none;
     border-radius: 50px;
+    width: 195px;
     height: 38px;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -693,16 +692,16 @@ select::-ms-expand {
 }
 
 .filter-sort .arrow {
-    position: relative;
-    top: 0;
-    left: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .filter-sort .arrow::before {
     content: '';
     position: absolute;
-    left: 169px;
-    top: -24px;
+    right: 15px;
+    bottom: 6px;
     border: 6px solid transparent;
     border-top: 11px solid #ffffff;
 }
@@ -943,33 +942,35 @@ select::-ms-expand {
 .sale-raspberry,
 .sale-chocolate {
     position: relative;
-    top: 0;
-    left: 0;
-    max-width: 560px;
-    min-height: 230px;
+    max-width: 520px;
     font-size: 18px;
     font-weight: 700;
     line-height: 22px;
     border-radius: 15px;
+    padding: 20px;
+    padding-top: 17px;
+    padding-bottom: 112px;
 }
 
 .sale-raspberry {
     background: #940a27 url("./../img/raspberry-background.jpg") repeat 0 0;
+    background-size: cover;
 }
 
 .sale-chocolate {
     background: #5b3117 url("./../img/chocolate-background.jpg") repeat 0 0;
+    background-size: cover;
 }
 
 .sale h2 {
     font-size: 35px;
     line-height: 41px;
-    margin: 18px 20px;
-    margin-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 16px;
 }
 
 .sale p {
-    margin: 0 20px;
+    margin: 0;
 }
 
 .button-sale {
@@ -985,7 +986,7 @@ select::-ms-expand {
 }
 
 .price-list {
-    margin-bottom: 44px;
+    margin-bottom: 45px;
 }
 
 .hit > ul,
@@ -1005,9 +1006,6 @@ select::-ms-expand {
     text-align: center;
 }
 
-.price-list ul {
-}
-
 .price-list li {
     margin-bottom: 36px;
 }
@@ -1022,8 +1020,8 @@ select::-ms-expand {
     left: 0;
 }
 
-.hit .product:hover::before,
-.price-list .product:hover::before {
+.product:hover::before,
+.product:hover::before {
     content: '';
     position: absolute;
     top: -5px;
@@ -1050,8 +1048,7 @@ select::-ms-expand {
     margin-top: 10px;
 }
 
-.hit .ice,
-.price-list .ice,
+.product .ice,
 .modal-buy .ice {
     border-radius: 50%;
 }
@@ -1062,14 +1059,14 @@ select::-ms-expand {
     left: 0;
 }
 
-.hit p,
-.price-list p {
+.product p {
     position: absolute;
     top: 162px;
     left: 0;
     font-size: 45px;
     font-weight: 700;
     color: #ffffff;
+    text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .weight {
@@ -1077,20 +1074,16 @@ select::-ms-expand {
     padding-left: 6px;
 }
 
-.hit .product-title,
-.price-list .product-title {
+.product-title {
+    margin: 0;
+    margin-top: 11px;
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
 }
 
-.product-title {
-    margin: 0;
-    margin-top: 11px;
-}
-
-.price-list a:hover,
-.price-list a:active {
+.product-title:hover,
+.product-title:active {
     color: #ffbc9e;
 }
 
@@ -1187,23 +1180,22 @@ select::-ms-expand {
 }
 
 .blog {
-    width: 560px;
-    height: 220px;
+    width: 510px;
     color: #323232;
+    padding: 20px;
+    padding-top: 17px;
     background: #ffffff url("./../img/blog-background.jpg") no-repeat;
     border-radius: 15px;
 }
 
 .blog-description {
     font-weight: 500;
-    padding: 25px 20px;
-    padding-bottom: 5px;
+    padding: 9px 0 6px;
     margin: 0;
 }
 
 .blog-title {
     max-width: 285px;
-    padding: 0 20px;
     margin: 0;
 }
 
@@ -1217,25 +1209,31 @@ select::-ms-expand {
 
 .subscribtion {
     width: 560px;
-    height: 220px;
+    min-height: 210px;
     color: #323232;
-    background-image: url("./../img/bg-post-2.svg"),
-                      url("./../img/bg-post.svg");
-    background-repeat: no-repeat,
-                       no-repeat;
-    background-position: 50% 50%,
-                         50% 50%;
+    background-image: url(./../img/bg-post.svg);
+    background-repeat: repeat;
     border-radius: 15px;
+    padding: 5px 0;
+}
+
+.bg-subscribtion {
+    background-color: #f8f7f4;
+    border-radius: 15px;
+    padding: 30px 0;
+    padding-bottom: 35px;
+    margin: 0 5px;
 }
 
 .subscribtion p {
-    padding: 35px 25px;
+    padding: 35px 21px;
+    padding-top: 0;
     margin: 0;
     line-height: 22px;
 }
 
 .send-email {
-    padding: 0 25px;
+    padding: 0 20px;
     margin: 0;
 }
 
@@ -1252,47 +1250,53 @@ select::-ms-expand {
 .navigation {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px
+    margin-bottom: 20px
 }
 
 .navigation-map {
     position: relative;
-    background-image: url("./../img/map.jpg");
+    height: 428px;
+    background-image: url(../img/map.jpg);
     background-size: cover;
 }
 
 .marker {
-    position: relative;
+    position: absolute;
     top: 140px;
-    left: 268px;
+    left: 341px;
     width: 218px;
 }
 
 .contacts {
-    position: relative;
-    top: -80px;
+    position: absolute;
+    top: 63px;
     left: 50%;
     margin-left: 270px;
-    width: 253px;
+    width: 250px;
     height: 245px;
     font-size: 14px;
     line-height: 20px;
     color: #323232;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 15px;
-    padding: 30px 25px;
+    padding: 28px 26px 30px;
+}
+
+.contacts p {
+    margin: 0;
+    margin-bottom: 20px;
 }
 
 .contacts span {
     font-size: 18px;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 25px;
 }
 
 .button-contacts {
     position: absolute;
     bottom: 30px;
-    padding: 10px 25px;
+    padding: 10px 28px;
 }
 
 .catalog-paginator {

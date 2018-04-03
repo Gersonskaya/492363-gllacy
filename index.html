@@ -6,7 +6,7 @@
         <title>Магазин &laquo;Глэйси&raquo;</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
         <link href="./css/normalize.css" rel="stylesheet">
-        <link href="./css/style.css" rel="stylesheet">
+        <link href="./css/style-min.css" rel="stylesheet">
     </head>
     <body>
         <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
@@ -179,15 +179,17 @@
                         </article>
 
                         <section class="subscribtion">
-                            <h2 class="visually-hidden">Рассылка</h2>
-                            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-                            <form class="send-email" action="#" method="get">
-                                <label>
-                                    <span class="visually-hidden">Электронная почта</span>
-                                    <input class="form-input" type="email" name="email" placeholder="Электронная почта" required>
-                                </label>
-                                <button type="button" class="button button-subscribtion">Отправить</button>
-                            </form>
+                            <div class="bg-subscribtion">
+                                <h2 class="visually-hidden">Рассылка</h2>
+                                <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                                <form class="send-email" action="#" method="get">
+                                    <label>
+                                        <span class="visually-hidden">Электронная почта</span>
+                                        <input class="form-input" type="email" name="email" placeholder="Электронная почта" required>
+                                    </label>
+                                    <button type="button" class="button button-subscribtion">Отправить</button>
+                                </form>
+                            </div>
                         </section>
                     </div>
                 </main>
@@ -205,7 +207,7 @@
                         <p>Для заказов по телефону: <br>
                             <span class="phone">8 812 450-25-25</span><br>
                             (с 10 до 20 ежедневно)</p>
-                        <button type="button" class="button button-contacts">Форма обратной связи</button>
+                        <a class="button button-contacts" href="form.html">Форма обратной связи</a>
                     </div>
                 </div>
             </section>
@@ -214,10 +216,10 @@
                 <footer class="main-footer">
                     <div class="footer-social">
                         <ul>
-                            <li><a class="social-button" href="#"><img src="img/twitter.svg" width="32" height="32" alt="Твитер"></a></li>
-                            <li><a class="social-button" href="#"><img src="img/instagram.svg" width="32" height="32" alt="Инстаграм"></a></li>
-                            <li><a class="social-button" href="#"><img src="img/fb.svg" width="32" height="32" alt="Фейсбук"></a></li>
-                            <li><a class="social-button" href="#"><img src="img/vk.svg" width="32" height="32" alt="Вконтакте"></a></li>
+                            <li><a class="social-button" href="#"><span class="visually-hidden">Твитер</span><img src="img/twitter.svg" width="32" height="32" alt="Твитер"></a></li>
+                            <li><a class="social-button" href="#"><span class="visually-hidden">Инстаграм</span><img src="img/instagram.svg" width="32" height="32" alt="Инстаграм"></a></li>
+                            <li><a class="social-button" href="#"><span class="visually-hidden">Фейсбук</span><img src="img/fb.svg" width="32" height="32" alt="Фейсбук"></a></li>
+                            <li><a class="social-button" href="#"><span class="visually-hidden">Вконтакте</span><img src="img/vk.svg" width="32" height="32" alt="Вконтакте"></a></li>
                         </ul>
                     </div>
 
@@ -258,6 +260,6 @@
                     </div>
                 </footer>
             </div>
-    </div>
+        </div>
     </body>
 </html>
