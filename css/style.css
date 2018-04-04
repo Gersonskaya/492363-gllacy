@@ -148,7 +148,7 @@ a,
 
 .nav-url:hover > .url-underline,
 .nav-url:active > .url-underline,
-.catalog-active .nav-url > .url-underline {
+.catalog-active-url > .url-underline {
     border-bottom: 1px solid transparent;
 }
 
